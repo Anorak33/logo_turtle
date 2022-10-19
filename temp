@@ -1,0 +1,61 @@
+from turtle import *
+
+def whithoutDrawGoto(x, y):
+    """ WhithoutDrawGoto(x, y, /)
+    
+        x and y : (int) """   
+    penup()
+    goto(x,y)
+    pendown()
+    
+def logo():
+    """Make the 'github.com' logo in turtle interface"""
+
+    # Init
+    speed(20)
+    whithoutDrawGoto(0,-200)
+    
+    # Back Circle
+    color("purple", "black")
+    begin_fill()
+    circle(200)
+    end_fill()   
+    
+    #Shape 
+
+    color("white", "white")
+    begin_fill()
+    x = -60; y = -190
+    whithoutDrawGoto(x, y)
+    halfBody(1)
+
+def halfBody(x):
+    circle(x*10,90)
+    forward(x*60)
+    for i in range(40):
+        forward(x*1)
+        right(x*1)
+    
+    seth(180)
+    for i in range(90):
+        forward(x*1.5)
+        right(x*1)
+    
+    seth(90)
+    for i in range(40):
+        forward(x*2)
+        right(x*1)
+
+    seth(110)
+    for i in range(40):
+        fd(x*1)
+        right(x*1)
+
+    seth(0)
+    for i in range(40):
+        fd(x*2)
+        right(x*1)
+
+ht()
+logo()
+done()
